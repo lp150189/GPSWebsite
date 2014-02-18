@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Location Based Project</title>
+
+    <!-- Core CSS - Include with every page -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Page-Level Plugin CSS - Dashboard -->
+    <link href="css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+    <link href="css/plugins/timeline/timeline.css" rel="stylesheet">
+
+    <!-- SB Admin CSS - Include with every page -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Location Based Website</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            
+
+        </nav>
+        <!-- /.navbar-static-top -->
+
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    
+                    <li>
+                        <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Overview and Progess</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Graph<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="velocityGraph.html">Velocity Graph</a>
+                            </li>
+                            <li>
+                                <a href="BatteryConsumptionGraph.html">Battery Consumption Graph</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a href="Contributors.html"><i class="fa fa-user fa-fw"></i> Contributors</a>
+                    </li>
+                   
+                    <li>
+                        <a href="#"><i class="fa fa-wrench fa-fw"></i> Project Functionality<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="GPS.html">GPS</a>
+                            </li>
+                            <li>
+                                <a href="Wifi.html">Wifi</a>
+                            </li>
+                            <li>
+                                <a href="RunTimer.html">Run Timer</a>
+                            </li>
+                            <li>
+                                <a href="Accel.html">Accelerometer</a>
+                            </li>
+                            <li>
+                                <a href="CellularNetwork.html">Cellular Network Location</a>
+                            </li>
+                            <li>
+                                <a href="Graphing.html">Graphing function</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Project Description<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#">APIs <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="LocationManager.html">LocationManager</a>
+                                    </li>
+                                    <li>
+                                        <a href="Timer.html">Timer</a>
+                                    </li>
+                                    <li>
+                                        <a href="LocationListener.html">LocationListener</a>
+                                    </li>
+                                    <li>
+                                        <a href="AsynTask.html">AsyncTask</a>
+                                    </li>
+                                    <li>
+                                        <a href="Json.html">JSON from Wink</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#">External Library <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="GraphView.html">GraphView</a>
+                                    </li>
+                                    <li>
+                                        <a href="Wink.html">Wink Library</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <li>
+                                <a href="#">How to collect Data <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="BatteryData.html">Battery</a>
+                                    </li>
+                                    <li>
+                                        <a href="VelocityData.html">Velocity</a>
+                                    </li>
+                                    <li>
+                                        <a href="FirstLockData.html">Time to first lock</a>
+                                    </li>
+                                </ul>
+                                <!-- /.nav-third-level -->
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-file-text-o fa-fw"></i> Source Code </a>
+                    </li>
+                    
+                </ul>
+                <!-- /#side-menu -->
+            </div>
+            <!-- /.sidebar-collapse -->
+        </nav>
+        <!-- /.navbar-static-side -->
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Accelerometer Funtion</h1>
+                </div> 
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3> Why did we want to include Accelerometer in our Location Based Application</h3>
+                    <p>  There are three ways to track a user movement in Android which are GPS, Cellular network, and Wifi. Among these three technologies, GPS is the most popular way to track. It is also the most battery consumed one. Every time the GPS chip trying to lock user location with the satellite, it will cost the phone a good amount of battery. If our phone continuously communicates with the satellite, it will run out of battery very quick. Therefore Accelerometer in our phone will help us to determine what kind of activities our users are doing in order to trigger the GPS at the right time and save battery. According to Oshin, Poslad, and Ma from Queen Mary University of London, we can determine the kind of activity we are in by looking at the magnitude of the Accelerometer velocity
+                    </p>
+                    <h3> What kind of data that the Accelerometer provide us</h3>
+                    <p>
+                        Accelerometer provide us the three coordinate x, y and z which are the 3 linear acceleration along these 3 axises. Their units are all m/s^2. But these acceleration had gravity accleration in it also.<br>
+                        <h5> x = Acceleration minus Gx on the x-axis</h5>
+                        <h5> y = Acceleration minus Gy on the y-axis</h5>
+                        <h5> z = Acceleration minus Gz on the z-axis</h5>
+                        According to Oshin, Poslad, and Ma  we can use the formula <b> v = squareRoot(x^2 +y^2+z^2)</b> to calculate the velocity for our activity. In their research, each activity will have a different range of velocity magnitude. Therefore, we can tell our GPS when to communicate with the satellite to save battery
+                    </p>
+                    <h3>How do we use these data to improve the battery consumption of our application</h3>
+                    <p>
+                        The use of the velocity data is very straight forward. If the velocity we found from the phone is within the range of "in-motion" activity, we should trigger our GPS to track the location. The flow-chart below is the basic ideas for a tracking algorithm that use accelerometer data.
+                    </p>
+                    <img src="img/flowChart.jpg">
+
+                    <h3> Our research on the accelerometer activity</h3>
+                    <p> 
+                        We did our own research that is similar to verify Oshin, Poslad, and Ma paper . <br>
+                        In our android application, we use the sensorManager API that is provided through Android library to get the reading for x, y, and z. Then we use the formula above to calculate the velocity. <br>
+                        We have three activities which are seated(at-rest), running, and vehicle(in-car motion). After collect the velocity for each activity, we created a simple graph to compare the velocity magnitude of these three activities.<br>
+                        The result came out very similar to the research on the paper.<br>
+                        <img src="img/velocityGraph.png" height="550" width="444">
+                    </p>
+                 </div>
+            </div>
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Core Scripts - Include with every page -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+
+    <!-- Page-Level Plugin Scripts - Dashboard -->
+    <script src="js/plugins/morris/raphael-2.1.0.min.js"></script>
+    <script src="js/plugins/morris/morris.js"></script>
+
+    <!-- SB Admin Scripts - Include with every page -->
+    <script src="js/sb-admin.js"></script>
+
+    <!-- Page-Level Demo Scripts - Dashboard - Use for reference -->
+    <script src="js/demo/dashboard-demo.js"></script>
+
+</body>
+
+</html>
