@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Location Based Project</title>
+
+    <!-- Core CSS - Include with every page -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Page-Level Plugin CSS - Dashboard -->
+    <link href="css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+    <link href="css/plugins/timeline/timeline.css" rel="stylesheet">
+
+    <!-- SB Admin CSS - Include with every page -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Location Based Website</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            
+
+        </nav>
+        <!-- /.navbar-static-top -->
+
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    
+                    <li>
+                        <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Overview and Progess</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Graph<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="velocityGraph.html">Velocity Graph</a>
+                            </li>
+                            <li>
+                                <a href="BatteryConsumptionGraph.html">Battery Consumption Graph</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a href="Contributors.html"><i class="fa fa-user fa-fw"></i> Contributors</a>
+                    </li>
+                   
+                    <li>
+                        <a href="#"><i class="fa fa-wrench fa-fw"></i> Project Functionality<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="GPS.html">GPS</a>
+                            </li>
+                            <li>
+                                <a href="Wifi.html">Wifi</a>
+                            </li>
+                            <li>
+                                <a href="RunTimer.html">Run Timer</a>
+                            </li>
+                            <li>
+                                <a href="Accel.html">Accelerometer</a>
+                            </li>
+                            <li>
+                                <a href="CellularNetwork.html">Cellular Network Location</a>
+                            </li>
+                            <li>
+                                <a href="Graphing.html">Graphing function</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Project Description<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#">APIs <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="LocationManager.html">LocationManager</a>
+                                    </li>
+                                    <li>
+                                        <a href="Timer.html">Timer</a>
+                                    </li>
+                                    <li>
+                                        <a href="LocationListener.html">LocationListener</a>
+                                    </li>
+                                    <li>
+                                        <a href="AsynTask.html">AsyncTask</a>
+                                    </li>
+                                    <li>
+                                        <a href="Json.html">JSON from Wink</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#">External Library <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="GraphView.html">GraphView</a>
+                                    </li>
+                                    <li>
+                                        <a href="Wink.html">Wink Library</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <li>
+                                <a href="#">How to collect Data <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="BatteryData.html">Battery</a>
+                                    </li>
+                                    <li>
+                                        <a href="VelocityData.html">Velocity</a>
+                                    </li>
+                                    <li>
+                                        <a href="FirstLockData.html">Time to first lock</a>
+                                    </li>
+                                </ul>
+                                <!-- /.nav-third-level -->
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-file-text-o fa-fw"></i> Source Code </a>
+                    </li>
+                    
+                </ul>
+                <!-- /#side-menu -->
+            </div>
+            <!-- /.sidebar-collapse -->
+        </nav>
+        <!-- /.navbar-static-side -->
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Cellular Network Funtion</h1>
+                </div> 
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3> Why would we consider cellular network in our research</h3>
+                    <p>
+                       We choose cellular network to determine location because
+                       <ol>
+                            <li> Battery Efficiency because our phones are always connected with the network through towers.</li>
+                            <li> The responding time is very fast because we use post method to connect to a server for the location repsonse</li>
+                            <li>It works indoor comparing to GPS that only work outdoor.</li>
+                       </ol> 
+                    </p>
+
+                    <h3>How do we get the latitude and longitude from our cellular network </h3>
+                    <p>
+                        In order to get the latitude and longitude by this method, we have to pick a server that has control of cell towers that are connected with our devices, then we send the request to these server to get a response back that contains the latitude and longitude. <br>
+                        There are four possible servers that we find during our research.
+                        <ol>
+                            <li>Google hidden API which is disabled three years ago.</li>
+                            <li>Our carriers servers which are private and expensive</li>
+                            <li>opencellid.org which is a free server but their tower coverage is very limited.</li>
+                            <li>http://unwiredlabs.com/api is a pay server that let you send 50 free request per day. They have very big tower coverage</li>
+                        </ol>
+                        We finally picked http://unwiredlabs.com/api because their tower coverage is very good that works every time and very fast. In order to get latitude and longitude from the server all you have to do is send a JSON request to the server and get a response back that contains these two fields
+                    </p>
+
+                    <h3>What values that http://unwiredlabs.com/api servers need for the post request</h3>
+                    <b> There are 5 fields that the server need you to provide in order to provide back the response.</b>
+                    <ol>
+                        <li>token: this is the key that you register with them so that they can recognize who are requesting their servers</li>
+                        <li>radio: could be gsm or cdma depending on your phone type</li>
+                        <li>mcc: Mobile country code, depending on your country</li>
+                        <li>mnc: Mobile network code, depending on your carrier</li>
+                        <li>cid: the cell id, this is the cellular id of your phone under a particular cell tower</li>
+                        <li>lac: location code, this is the id of the tower that you are connecting to</li>
+                    </ol>
+                    This is a demo for the API that unwiredlabs has on their Website
+                    <img src ="img/unwire.png" width="1000">
+                </div>
+                <h3> what are the disadvantages of getting location using the cellular network.</h3>
+                <ol>
+                    <li>Inaccurate position in area that has few network towers because of the position it provide depending the position of the towers</li>
+                    <li>Expensive cost because the servers are not free for you to make request</li>
+                    <li>Require the Internet connection from data plan or Wifi to send the post request</li>
+                </ol>
+            </div>
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Core Scripts - Include with every page -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+
+    <!-- Page-Level Plugin Scripts - Dashboard -->
+    <script src="js/plugins/morris/raphael-2.1.0.min.js"></script>
+    <script src="js/plugins/morris/morris.js"></script>
+
+    <!-- SB Admin Scripts - Include with every page -->
+    <script src="js/sb-admin.js"></script>
+
+    <!-- Page-Level Demo Scripts - Dashboard - Use for reference -->
+    <script src="js/demo/dashboard-demo.js"></script>
+
+</body>
+
+</html>
