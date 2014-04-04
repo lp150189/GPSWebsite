@@ -89,7 +89,7 @@
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
-                    <li>
+                    <li >
                         <a href="#"><i class="fa fa-sitemap fa-fw"></i> Project Description<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
@@ -163,28 +163,50 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Wifi Function</h1>
+                    <h1 class="page-header">Location Algorithm</h1>
                 </div> 
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <h3>What is Wifi?</h3>
+                    <h3>Motivation to design our own algorithm for our location based application</h3>
                     <p>
-                        What is Wifi and how can we use it to increase GPS efficiency:
-                         Wifi is the signal that is produced from a wireless network hub that is projecting an internet connection over radio waves. When a device is connected to the internet it is given an address that represents its location in the internet, this is called an IP address. It is possible to determine the physical location of the wireless access using this address. Thus if a phone can connect to a network, it must be within range of the location that is linked to the IP address of the router. This is preferred over GPS because it allows for use indoors and uses less energy.
+                        <ol>
+                            <li>save the battery comparing using pure GPS</li>
+                            <li>Improve Accuracy</li>
+                            <li>Make it work in-door and out-door</li>
+                        </ol>
+                        
                     </p>
-                    <h3> What are the limitations of Wifi?</h3>
+                    <h3> What hardware of our mobile devices will be used in our algorithm</h3>
                     <p>
-                        Wifi is not always available and the signal does not stretch far away from the router in most circumstances. This makes Wifi an unreliable source for location data.
+                        <ol>
+                            <li>GPS chip</li>
+                            <li>Accelerometer</li>
+                            <li>Wifi data</li>
+                        </ol>
+                        
+                    </p>
+                    <h3>Implementation</h3>
+                    <p>
+                    1)Using accelerometer to determine what kind of activity the phone user are in. If the user is in moving-motion, then trigger the gps to track the location of the user</br>
+                    2) If the user is not moving for 15 minutes, then turn off gps for 2 minutes to save the battery.</br>
+                    3) After two minutes, keep tracking the accelerometer to see if the person in moving-motion or not to trigger the GPS again.</br>
+                    </p>
+                    <h3>Strength and Weakness</h3>
                     
-                    </p>
-                    <h3>How do we retrieve and use the data from the Wifi?</h3>
-                     Using several APIs provided by google in the default android library we are able to retrieve location data in the form of latitude and longitude. We enable wifi on the device and begin to push for locations. Because of the speed at which wifi can retrieve a location, the update speed was limited in Google’s API to around an update every 5 seconds.
-                    </p>
-                    <h3>How do we implement the Wifi?</h3>
-                    <p>
-                         Implementation of Wifi used the primary functions built into the API of the LocationManager class and the LocationListener class. Using a button, the application triggers the creation of a LocationManager object. The object is then handed to a DeviceListener class. DeviceListener is a custom class which extends LocationListener to allow for more flexibility and functionality when interacting with the mainActivity. This flexibility Once the DeviceListener is enabled, it will continually receive location updates and set them to a variable for later use.
-                    </p>
+                    <b>Strength</b>
+                        <ul>
+                            <li>Save battery life a lot for our apps if the users using it continuously for long period of time and they also stop and move frequently</li>
+                            <li> Good differentiation between stand still and running helps the application to trigger the GPS correctly</li>
+                            <li> Avoid using double integration of the linear acceleration to get the distance ( this way is extremely inaccurate)</li>
+                        </ul>
+                    <b>Weakness</b>
+                        <ul>
+                            <li> Only save batter if you use the app constantly and stop moving for a period of time</li>
+                            <li> The differentiation between in the range of the vector magnitude between in-vehicle and at-rest is not big</li>
+                            <li> The counter for turning off GPS(15 minutes) might not be the good number to use</li>
+                            <li> Take long period of time and many test runs to compare</li>
+                        </ul>
                 </div>
             </div>
         </div>
